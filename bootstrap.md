@@ -60,6 +60,61 @@ sudo system76-power graphics intel
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting<Paste>
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
+###############
+# PP4RS:
+###############
+
+# CLI:
+sudo apt install libcurl4-gnutls-dev librtmp-dev
+# Python TODO: Possible with Lynx?):
+curl -O https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh && bash Anaconda3-2019.10-Linux-x86_64.sh
+pip install --upgrade pip
+pip install linearmodels snakemake
+# pip install selenium msgpack virtualenvwrapper
+
+# Webscraping skipped
+
+# R
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+sudo apt update
+sudo apt install r-base  r-base-dev
+
+# RStudio (TODO: Replace download and install with lynx)
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5042-amd64.deb
+sudo gdebi rstudio-1.2.5042-amd64.deb
+
+# R packages (ToDo)
+to_install <-c( "reshape", "rmarkdown",
+                "plm", "Hmisc", "sandwich",
+                "Ecdat", "stargazer", "knitr",
+                "httr", "rvest", "xml2",
+                "xtable","tidyverse", "AER",
+                "rdd", "car", "aod", "lmtest",
+                "lfe", "nlme", "lme4",
+                "erer", "margins", "multiwayvcov",
+                "lubridate", "haven", "rddensity",
+                "rdrobust", "ivpack", "readxl",
+                "ggrepel", "multiwayvcov", "RSQLite",
+                "dbplyr", "devtools",
+                "rticles", "here",
+                "optparse", "rlist"
+                )
+
+install.packages(to_install)
+
+from_gh <- c("ddsjoberg/gtsummary",
+             "vincentarelbundock/modelsummary",
+             "rstudio/fontawesome",
+             "rstudio/gt",
+             "rstudio/renv"
+             )
+
+devtools::install_github(from_gh)
+
+# LaTeX and Pandoc
+sudo apt install texlive-latex-extra pandoc
+
+
 ############### 
 # Links:
 ###############

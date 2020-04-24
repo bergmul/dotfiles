@@ -103,7 +103,39 @@ export DEFAULT_USER=`whoami`
 
 # Aliases
 
-alias open='xdg-open'
+alias open="xdg-open"
+alias mail="neomutt"
+alias fetch="mailsync"
 
+# extra git stuff
+alias git-pull-hard="git reset --hard; git clean -f -d; git pull"
+
+# aliases to configs
 alias viz="nvim ~/.zshrc && source ~/.zshrc"
 alias vio="nvim ~/.oh-my-zsh"
+
+# aliases for Debian
+alias aptl="apt list"
+alias apts="apt search"
+alias apti="sudo apt install"
+alias update="sudo apt update && sudo apt upgrade"
+alias full-update="sudo apt update && sudo apt full-upgrade" # force update: removes currently installed packages if necessary for upgrade
+alias aptr="sudo apt remove"
+alias aptp="sudo apt purge" # also remove user edited configs
+alias autoremove="sudo apt autoremove" # remove unneeded dependencies
+alias upgradeable="sudo apt list --upgradeable"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ucb/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ucb/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ucb/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ucb/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
