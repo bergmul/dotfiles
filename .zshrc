@@ -109,6 +109,8 @@ alias fetch="mailsync"
 
 # extra git stuff
 alias git-pull-hard="git reset --hard; git clean -f -d; git pull"
+alias git-forget-folder="git rm -r --cached"
+alias git-forget="git rm --cached"
 
 # aliases to configs
 alias viz="nvim ~/.zshrc && source ~/.zshrc"
