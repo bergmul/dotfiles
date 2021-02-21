@@ -2,8 +2,8 @@
 	helper = osxkeychain
 [user]
 	name = bergmul
-	email = ulrich.bergmann@mailbox.org
-[alias]
+	email = ulrich.bergmann@gmail.com
+	[alias]
 	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
 [core]
 	editor = nano
