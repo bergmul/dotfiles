@@ -148,8 +148,6 @@ alias s="snakemake --cores 4"
 # tab completion for colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
 
-# replace most common ls's with colorls
-alias ls="colorls"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
