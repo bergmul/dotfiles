@@ -16,6 +16,9 @@ SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gr:git\x20pull\x20\x2d\x2drebase
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_gst:git\x20status
+SETUVAR _fish_abbr_l:exa\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dgrid\x20\x2d\x2dheader\x20\x2d\x2dall
+SETUVAR _fish_abbr_la:exa\x20\x2d\x2dall\x20\x2d\x2dacross
+SETUVAR _fish_abbr_ll:exa\x20\x2d\x2dlong\x20\x2d\x2dgit\x20\x2d\x2dgrid\x20\x2d\x2dheader
 SETUVAR _fish_abbr_nb:jupyter\x20lab
 SETUVAR _fish_abbr_oi:open\x20_book/index\x2ehtml
 SETUVAR _fish_abbr_s:snakemake\x20\x2d\x2dcores\x204
