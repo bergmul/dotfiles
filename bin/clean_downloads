@@ -1,0 +1,9 @@
+#!/bin/bash
+if ! command -v trash &> /dev/null
+  then
+    rm -rf ~/Downloads/*
+    echo "used rm command"
+  else
+    trash ~/Downloads/*
+    echo "used trash command"
+fi
