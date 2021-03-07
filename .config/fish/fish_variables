@@ -76,4 +76,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/bergmul/Applications\x1e/opt/homebrew/anaconda3/bin\x1e/opt/homebrew/anaconda3/condabin\x1e/Library/Frameworks/R\x2eframework/Resources/bin/\x1e/opt/homebrew/bin/brew\x1e/opt/homebrew/bin/\x1e/usr/local/homebrew/bin/
+SETUVAR fish_user_paths:/Applications/Visual\x20Studio\x20Code\x20\x2d\x20Insiders\x2eapp/Contents/Resources/app/bin\x1e/Users/bergmul/Applications\x1e/opt/homebrew/anaconda3/bin\x1e/opt/homebrew/anaconda3/condabin\x1e/Library/Frameworks/R\x2eframework/Resources/bin/\x1e/opt/homebrew/bin/brew\x1e/opt/homebrew/bin/\x1e/usr/local/homebrew/bin/
