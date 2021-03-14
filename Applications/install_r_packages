@@ -1,3 +1,3 @@
 #! /bin/bash
 
-Rscript $HOME/bin/install_r_packages.R
+Rscript $HOME/Applications/install_r_packages.R
