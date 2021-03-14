@@ -9,3 +9,5 @@
 	editor = nano
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
