@@ -2,19 +2,23 @@
 
 if ! command -v fd &> /dev/null
   then
+    echo "##############################################"
     echo "fd command not found -- terminating."
+    echo "##############################################"
     exit 1
 elif ! command -v fd &> /dev/null
   then
+    echo "##############################################"
     echo "trash command not found -- terminating."
+    echo "##############################################"
     exit 1
+else
+    echo "##############################################"
 fi
 
 DL=~/Downloads
 DT=~/Desktop
 TR=~/.Trash
-
-echo "##############################################"
 
 if [[ `fd . $DL --prune | wc -l` -gt 0 ]]
   then
