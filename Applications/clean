@@ -1,26 +1,37 @@
 #!/bin/bash
 
-#!/bin/bash
-
-DL=~/Downloads/*
-DT=Desktop/*.png
-TR=~/.Trash/*
-
-if ! command -v trash &> /dev/null
+if ! command -v fd &> /dev/null
   then
-		echo "Trash command not found. Using 'rm' instead." 
-    echo "-----"
-    test -f "$DL" && rm -rf "$DL" && echo "Downloads cleaned."
-		test -f "$DT" && rm     "$DT" && echo "Desktop cleaned."
-		test -f "$TR" && rm -rf "$TR" && echo "Trash cleaned."
-    echo "-----"
-		echo "Cleaned Desktop, Downloads, and Trash using 'rm'."
-  else
-		echo "Using 'trash'."
-    echo "-----"
-    test -f "$DL" && trash "$DL" && echo "Downloads cleaned."
-		test -f "$DT" && trash "$DT" && echo "Desktop cleaned."
-		test -f "$TR" && trash -ey   && echo "Trash cleaned."
-    echo "-----"
-		echo "Cleaned Desktop, Downloads, and Trash using 'trash'."
+    echo "fd command not found -- terminating."
+    exit 1
+elif ! command -v fd &> /dev/null
+  then
+    echo "trash command not found -- terminating."
+    exit 1
 fi
+
+DL=~/Downloads
+DT=~/Desktop
+TR=~/.Trash
+
+echo "##############################################"
+
+if [[ `fd . $DL --prune | wc -l` -gt 0 ]]
+  then
+    fd . $DL --prune --no-ignore-vcs -X trash
+    echo "- Cleaned `basename $DL`."
+  else
+    echo "`basename $DL` is already empty."
+fi
+
+if [[ `fd .png $DT --prune | wc -l` -gt 0 ]]
+  then
+    fd .png $DT --prune --no-ignore-vcs -X trash
+    echo "- Cleaned `basename $DT`."
+  else
+    echo "`basename $DT` is  already empty."
+fi
+
+trash -e
+
+echo "##############################################"
