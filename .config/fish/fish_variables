@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR FZF_DEFAULT_COMMAND:fd
 SETUVAR ZO_CMD:jo
 SETUVAR Z_CMD:j
 SETUVAR Z_DATA:/Users/bergmul/\x2elocal/share/z/data
